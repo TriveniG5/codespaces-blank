@@ -98,7 +98,7 @@ newGameButton.addEventListener(`click`,function(e){
     prevGuess=[]
     newGuess=1
     guessSlot.innerHTML=``
-    remaining.innerHTML=`${11-newGuess}` ;
+    remaining.innerHTML=`${10-newGuess}` ;
 
     userInput.removeAttribute(`disabled`)
     startOver.removeChild(p)
