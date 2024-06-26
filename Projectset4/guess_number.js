@@ -23,6 +23,10 @@ function validateGuess(guess){
 
  }
 
- function displayMessage(guess){
+ function displayGuess(guess){
     
+ }
+
+ function displayMessage(message){
+
  }
