@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Code in JS</title>
+</head>
+<body style="background-color: #212121;color: green;">
+    <h1>Civil Engineer: Triveni</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const enggTriveni=function(){
+        console.log("Triveni Bhai");
+    }
+    const changeText=function(){
+    document.querySelector(`h1`).innerHTML="Dhruv is a very sharp minded kid"
+}
+    const changeMe=   setTimeout(enggTriveni, 2000)
+
+document.querySelector(`#stop`).addEventListener(`click`,function(){
+    clearTimeout(changeMe)
+    console.log("Services Stopped!!");
+})
+</script>
+</html>
