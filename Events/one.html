@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Elements</title>
 </head>
-<body>
-  <h2>Amazing Images</h2>
+<body style="background-color: #212121;">
+  <h2 style="color: #fff;">Amazing Images</h2>
   <div>
     <ul id="images">
       <li>
@@ -31,10 +31,62 @@
         <li>
           <img width="200px" id="photoshop3" src="https://images8.alphacoders.com/134/1348342.jpeg" alt="photoshop"></li>
   
-          <li><img   width="200px" id="doggy3"   src="https://images6.alphacoders.com/678/678636.jpg" alt="doggy"></li>
+          <li><img   width="200px" id="doggy3"   src="https://images6.alphacoders.com/678/678636.jpg" alt="doggy" ></li>
+
+          <l ><a   style="color: blue;"  href="https://google.com" id="google" target="blank">Google</a></li>
       
 
     </ul>
   </div>
 </body>
+<script>
+  // document.getElementById(`doggy3`).onclick=function(){
+  //   alert(`Owl checked`)
+  // }
+
+  // document.getElementById(`images`).addEventListener(`click`,function(e){
+  //   console.log("clicked inside the ul");
+  // }, true)
+
+  // document.getElementById(`doggy3`).addEventListener(`click`,function(e){
+  //   console.log("doggy clicked");
+  //   e.stopPropagation()
+  // }, true)
+
+  // document.getElementById(`google`).addEventListener(`click`,function(e){
+  //   console.log("google clicked");
+  //   e.preventDefault();
+  //   e.stopPropagation();
+  // },false)
+
+
+
+  //type,timestamp,defaultPrevented
+  //target, toElement, srcElement, currentTarget
+  //clientX, ClientY, ScreenX, ScreenY
+  //altkey, ctrlkey, shiftkey, keycode
+
+
+document.querySelector(`#images`).addEventListener(`click`, function(e){
+
+
+  console.log(e.target.tagName);
+
+  if(e.target.tagName===`IMG`){
+
+    console.log(e.target.parentNode);
+
+    let removeIt=e.target.parentNode
+
+  removeIt.remove()
+  }
+
+  
+
+  //removeIt.parentNode.removeChild(removeIt);
+
+})
+
+
+</script>
 </html>
